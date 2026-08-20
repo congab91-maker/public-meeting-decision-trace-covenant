@@ -8,10 +8,10 @@ truthfulness.
 ## Live Deployment
 
 Studionet (Chain ID 61999):
-`0x941CAD8c63C99D5f397018EEe00AabaEcad2E2E1`
+[`0x941CAD8c63C99D5f397018EEe00AabaEcad2E2E1`](https://explorer-studio.genlayer.com/address/0x941CAD8c63C99D5f397018EEe00AabaEcad2E2E1)
 
 Deployment transaction:
-`0x68c4a4b60cdc119bd7003659757c606ffb0f85ee950442dff4501b6eb11073c0`
+[`0x68c4a4b60cdc119bd7003659757c606ffb0f85ee950442dff4501b6eb11073c0`](https://explorer-studio.genlayer.com/tx/0x68c4a4b60cdc119bd7003659757c606ffb0f85ee950442dff4501b6eb11073c0)
 (FINALIZED, SUCCESS, 5/5 validators agree). Reproducible E2E inputs are in
 `samples/demo_manifest.json`; transaction and readback details are in
 `docs/deployment-evidence.md`.
