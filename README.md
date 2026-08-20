@@ -7,15 +7,21 @@ truthfulness.
 
 ## Live Deployment
 
-Not yet deployed. Studionet evidence is created only after the exact source,
-tests, and PRE-DEPLOY approvals are complete.
+Studionet (Chain ID 61999):
+`0x941CAD8c63C99D5f397018EEe00AabaEcad2E2E1`
+
+Deployment transaction:
+`0x68c4a4b60cdc119bd7003659757c606ffb0f85ee950442dff4501b6eb11073c0`
+(FINALIZED, SUCCESS, 5/5 validators agree). Reproducible E2E inputs are in
+`samples/demo_manifest.json`; transaction and readback details are in
+`docs/deployment-evidence.md`.
 
 ## Development status
 
 The implementation specification is in `docs/architecture.md` and the consensus
 binding requirements are in `docs/consensus.md`. The contract source and Direct
 Mode regression tests are implemented locally; PRE-DEPLOY semantic validation
-and Studionet evidence remain pending.
+and Studionet evidence are recorded in the deployment evidence file.
 
 ## Intended integrations
 
@@ -33,6 +39,23 @@ docs/       # approved architecture and consensus design
 samples/    # exact public demo manifests are added after hash capture
 tests/      # Direct Mode regression tests
 ```
+
+## Consensus Engineering Lessons
+
+- Hash commitments are checked against fetched raw bytes before any model call.
+- Leader and validator rerun the same bounded assessment and exact-compare every
+  stored decision field.
+- Failed fetches, malformed bytes, and malformed model output fail closed as
+  `UNRESOLVED`.
+
+## Consensus Binding Matrix
+
+| Stored field | Binding |
+|---|---|
+| `trace_status`, masks, `vote_outcome` | exact leader/validator decision JSON |
+| `missing_mask` | sealed artifact availability and HTTP result |
+| agenda commitment | SHA-256(raw AGENDA bytes) = artifact hash = `agenda_item_hash` |
+| `revision` and history | deterministic lifecycle and revision-keyed storage |
 
 ## License
 

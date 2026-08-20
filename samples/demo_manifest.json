@@ -1,0 +1,15 @@
+{
+  "case_id": "meeting-r6",
+  "authority_host": "www.example.com",
+  "meeting_day": "2026-08-20",
+  "agenda_item_hash": "ff67a9d764d6a2367a187734e697f6a53217db9a21c101d410a113ca871a299d",
+  "artifacts": [
+    {"type": 1, "url": "https://www.example.com/?artifact=agenda", "sha256": "ff67a9d764d6a2367a187734e697f6a53217db9a21c101d410a113ca871a299d"},
+    {"type": 2, "url": "https://www.example.com/?artifact=minutes", "sha256": "ff67a9d764d6a2367a187734e697f6a53217db9a21c101d410a113ca871a299d"},
+    {"type": 4, "url": "https://www.example.com/?artifact=resolution", "sha256": "ff67a9d764d6a2367a187734e697f6a53217db9a21c101d410a113ca871a299d"},
+    {"type": 8, "url": "https://www.example.com/?artifact=announcement", "sha256": "ff67a9d764d6a2367a187734e697f6a53217db9a21c101d410a113ca871a299d"}
+  ],
+  "body_bytes": 559,
+  "body_sha256": "ff67a9d764d6a2367a187734e697f6a53217db9a21c101d410a113ca871a299d",
+  "note": "Reproducible consensus smoke fixture; not a claim about a real civic meeting."
+}
